@@ -1,0 +1,36 @@
+﻿@model Buy_And_Sell_House_Core_Webapp.Business.Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.House)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.House.HouseAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerPhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerPhoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-info"  asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
